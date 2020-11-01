@@ -1,0 +1,18 @@
+[auth]
+type = htpasswd
+htpasswd_filename = /home/radicale/users
+# encryption method used in the htpasswd file
+htpasswd_encryption = md5
+# Average delay after failed login attempts in seconds
+delay = 1
+
+[server]
+hosts = 0.0.0.0:5232, [::]:5232
+max_connections = 4
+# 10 Megabyte
+max_content_length = 10000000
+# 30 seconds
+timeout = 30
+
+[storage]
+filesystem_folder = /home/radicale/storage
